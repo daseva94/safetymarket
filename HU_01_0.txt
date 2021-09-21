@@ -1,3 +1,0 @@
-Dada el compromiso adquirido para la semana dos
-Abri una rama en el repositorio de github para el control de versiones
-Para realizar el requerimiento de esta semana 
