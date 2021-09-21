@@ -1,3 +1,12 @@
 Dada el compromiso adquirido para la semana dos
 Abri una rama en el repositorio de github para el control de versiones
 Para realizar el requerimiento de esta semana 
+
+El dia lunes 13 de septiembre descargue la aplicacion de git para windows.
+Dado que ya contaba con un reporitorio en github, solo tube que entregar mmi nombre de usuario al compañero 
+que creo el proyecto para que me hiciera colaborador.
+Debido a que ya contaba con la aplicacion de github para windows los commits, pulls y push que se hicieron al 
+repositorio principal.
+El dia sabado hice mi primer pull y mi primer commit al repositorio del proyecto con este mismo archivo.
+En el transcurso de la semana con el equipo nos reunimos en 3 ocasiones de las cuales pude asistir a dos de estas reuniones, 
+en la cual pude resolver una de mis dudas que era respecto al funcionamiento del pull en github.
