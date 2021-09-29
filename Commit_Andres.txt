@@ -1,3 +1,0 @@
-Mi nombre es Andres Felipe Lugo Cardenas,Soy técnico en programación de software, 
-actualmente me encuentro cursando Fundamentos de Programación con Misión tic,
-tengo conocimiento en Java, PHP, Mysql, HTML, CSS, C++, Python
