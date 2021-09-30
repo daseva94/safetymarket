@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="scripts.js" defer>  </script>
+</head>
+
+<body background="imagenes/fondo SM.jpg">
+
+    <div class='page-nav'>
+        <h1><img src="imagenes/LOGO2.png" width="6%" height="6%">SAFETYMARKET</h1>
+    </div>
+
+    <div class="container">
+        <header>
+            <h2 id="title">GESTION DE VENTAS</h2>
+        </header>
+        <button id="btnActualizar">ACTUALIZAR</button>
+        <button id="btnBuscar"     onclick="buscar();">BUSCAR</button>
+        <button id="btnCancelar"   onclick="cancelar();">CANCELAR</button>
+
+        <div class="forma">
+            <label for="numero" id="Codigo">Venta#</label>
+            <input type="number" id="codigo" name="id-venta" minlength="5" maxlength="20" class="form-control"
+            placeholder="Numero venta" min="0" />
+        </div>
+        <div>
+            <label for="Valor" id="Valor-venta">Valor Venta</label>
+            <input type="number" id="valor" name="id-valor" minlength="5" maxlength="20" class="form-control"
+            placeholder="Valor venta" min="0"/>
+        </div>
+        <div>
+            <label for="Fecha" id="Fecha-venta">Fecha Venta</label>
+            <input type="date" id="fecha" name="fecha-venta" minlength="5" maxlength="20" class="form-control" min="2021-04-01"
+            placeholder="Valor venta" />
+        </div>
+
+            <table>
+                <caption>Informacion de ventas</caption>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Valor</th>
+                    <th>Fecha</th>
+                    <th>Accion</th>
+                </tr>
+        
+                <tr>
+                    <td>01</td>
+                    <td>120000</td>
+                    <td>12/02/2021</td>
+                    <td><a href="javascript:void(0);" onclick="del_tr(this);">Eliminar</a></td>
+                </tr>
+            </table>
+
+    </div>
+    
+
+</body>
+</html>
