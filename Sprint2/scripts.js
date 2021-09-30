@@ -58,6 +58,7 @@ function buscar() {
 function cancelar(){
     alert("HOLA DESDE CANCELAR");
 }
+
 borrar = function (obj) {// Devuelto es el objeto de la etiqueta a
     // Eliminar nodos secundarios a través del nodo principal
     // Elimina tr a través de la tabla, obtén el nodo de la tabla primero
