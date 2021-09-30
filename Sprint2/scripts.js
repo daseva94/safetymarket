@@ -4,25 +4,25 @@ document.getElementById("btnActualizar").onclick = function () {
     var valor = document.getElementById("valor").value;
     var fecha = document.getElementById("fecha").value;
 
-    // Para instalar id en td, primero cree el nodo td
+    // Para instalar codigo en td, primero cree el nodo td
     var td_codigo_node = document.createElement("td");
     // El valor ingresado es texto, no un nodo. Si desea agregarlo a través de un nodo, debe convertirse en un nodo de texto
     var codigo_text_node = document.createTextNode(codigo);
-    // Agregar nodo de identificación
+    // Agregar nodo de codigo
     td_codigo_node.appendChild(codigo_text_node);
 
-    // Para cargar el nombre en td, primero cree el nodo td
+    // Para cargar el valor en td, primero cree el nodo td
     var td_valor_node = document.createElement("td");
     // El valor ingresado es texto, no un nodo. Si desea agregarlo a través de un nodo, debe convertirse en un nodo de texto
     var valor_text_node = document.createTextNode(valor);
-    // Agregar nombre de nodo
+    // Agregar valor nodo
     td_valor_node.appendChild(valor_text_node);
 
-    // Para cargar sexo en td, primero crea un nodo td
+    // Para cargar fecha en td, primero crea un nodo td
     var td_fecha_node = document.createElement("td");
     // El valor ingresado es texto, no un nodo. Si desea agregarlo a través de un nodo, debe convertirse en un nodo de texto
     var fecha_text_node = document.createTextNode(fecha);
-    // Agregar nodo sexual
+    // Agregar nodo fecha
     td_fecha_node.appendChild(fecha_text_node);
 
     // Eliminar para instalar en td, pero no, así que cree un hipervínculo primero y luego agregue un nodo de texto "eliminar"
@@ -30,7 +30,7 @@ document.getElementById("btnActualizar").onclick = function () {
     // Establecer el atributo href
     ele_a.setAttribute("href","javascript:void(0);");
     // Establecer el atributo onclick
-    ele_a.setAttribute("onclick","del_tr(this);");
+    ele_a.setAttribute("onclick","borrar(this);");
     // Convertir eliminar en un nodo de texto
     var del_node = document.createTextNode("Eliminar");
     // Realizar hipervínculo
@@ -57,4 +57,10 @@ function buscar() {
 }
 function cancelar(){
     alert("HOLA DESDE CANCELAR");
+}
+borrar = function (obj) {// Devuelto es el objeto de la etiqueta a
+    // Eliminar nodos secundarios a través del nodo principal
+    // Elimina tr a través de la tabla, obtén el nodo de la tabla primero
+    var table_node = obj.parentNode.parentNode.parentNode;
+    table_node.removeChild(obj.parentNode.parentNode);
 }

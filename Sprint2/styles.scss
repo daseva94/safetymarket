@@ -17,9 +17,11 @@ h2{
     text-align: center;
     font-size:x-large;
 }
-
+button{
+    margin: auto;
+}
 button:hover{
-    background-color: #0000FF;
+    background-color: blue;
     color: white;
     border-radius: 15%;
 }
