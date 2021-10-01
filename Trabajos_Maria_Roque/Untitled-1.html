@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="registro.js"></script>
         <link rel="stylesheet" href="style.css">
         <title>Interfaz MR Sprint 2</title>
     </head>
@@ -12,9 +13,9 @@
             <h2 style="background-color: cornflowerblue;text-align:center;">REGISTRATE</h2>
             <form style="background-color: rgb(93, 195, 241); text-align:center;">
                  <label for="fname">Nombre:</label><br>
-                 <input class="controls" type="text" id="fname" name="fname" value="Ingrese Nombre"><br>
+                 <input class="controls" type="text" id="fname" name="fname" value="Ingrese Nombre" required><br>
                  <label for="lname">Apellidos:</label><br>
-                 <input class="controls" type="text" id="lname" name="lname" value="Ingrese apellidos"><br>
+                 <input class="controls" type="text" id="lname" name="lname" value="Ingrese apellidos" required><br>
                  <label for="Cargo">Cargo:</label><br>
                  <select class="controls" name="Seleccione una opción">
                     <option value="1">Seleccione una opción</option> 
@@ -22,14 +23,15 @@
                     <option value="3">Administrador</option> 
                  </select>
                  <label for="email">Email:</label><br>
-                 <input class="controls" type="email" id="email" name="email" value="Ingrese Correo electrónico"><br>
+                 <input class="controls" type="email" id="email" name="email" value="Ingrese Correo electrónico" required><br>
                  <label for="password">Contraseña:</label><br>
-                 <input class="controls" type="password" id="Contraseña" name="Contraseña" value=""><br>
+                 <input class="controls" type="password" id="Contraseña" name="Contraseña" value="" required><br>
                  <p style="color:white;">Al registrarse confirma estar de acuerdo con los <a href="#">Terminos y Condiciones</a> de SAFETYMARKET</p>
-                 <input class="botons" type="submit" value= "Registrarse">
+                 <input onclick="registro()" class="botons" type="submit" value= "Registrarse">
                  <p><a href="verificacion.html">Ya estoy registrado ó deseo acceder con Google</a></p>
             </form>
         </section>
              
          
     </body>
+</html>
