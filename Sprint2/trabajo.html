@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formularios</title>
+  <link rel="stylesheet" type="text/css" href="estilo1.css">
+
+  <script src="Java.js" defer>  </script>
+</head>
+<body>
+  <form action="#" method="post">
+    <fieldset>
+      <body background="imagenes/fondo SM.jpg">
+      <legend><h2>Usuarios</h2></legend>
+     
+        
+  <div class="container">   
+    <input type="submit"  value="Actualizar" id="btnActualizar"></button>
+    <input type="submit"  value="Buscar"  id="btnBuscar"     onclick="buscar();"></button>
+    <input type="submit"  value="Cancelar" id="btnCancelar"   onclick="cancelar();"></button>
+    
+    <div class="input-group">
+            <label for="Id" id="Id-1"></label>
+            <input type="number" id="Id" name="id-us" minlength="5" maxlength="20" class="form-control"
+            placeholder="Identificacion" min="0"/>
+            </div>
+      
+      
+      
+            <div class="input-group">
+        <label for="nombre" id="Nombres"></label>
+        <input type="text" id="nombre" name="nombre" minlength="5" maxlength="20" class="form-control"
+        placeholder="Nombres" min="0" />
+        </div>
+      
+      
+      
+      <div class="input-group">
+        <label for="apellido" id="Apellidos"></label>
+        <input type="text" id="apellidos" name="apellido" minlength="5" maxlength="20" class="form-control"
+        placeholder="Apellidos" min="0" />
+       </div>
+
+
+
+
+       <div class="input-group">
+        <label for="Celular" id="Celular"></label>
+        <input type="number" id="Celular" name="Celular" minlength="5" maxlength="20" class="form-control"
+        placeholder="Numero de Celular" min="0"  />
+       </div>
+
+
+
+
+       <div class="input-group">
+        <label for="Direccion" id="Direccion"></label>
+        <input type="text" id="direccion" name="Direccion" minlength="5" maxlength="20" class="form-control"
+        placeholder="Direccion" min="0"/>
+       </div>
+
+
+
+       <div class="input-group">
+        <label for="estado" id="Estado"></label>
+        <input type="text" id="estado" name="estado" minlength="5" maxlength="20" class="form-control"
+        placeholder="Vendedor o Administrador" min="0" />
+       </div>
+  
+  
+
+
+
+              </fieldset>  
+                    </form>
+
+ 
+       
+    </div>
+
+    <table id="restable">
+          <thead>
+            <tr>
+            <th colspan='4'> Informacion De Usuarios</th>
+          </tr>
+          <tr>
+            <th>Identificacion</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Numero de celular</th>
+            <th>Direccion</th>
+            <th>Vendedor o Administrador</th>
+            <th>Eliminar</th>
+
+          </tr>
+          <tr class="htmw">
+            <td>#####</td>
+            <td>Andres</td>
+            <td>Lugo</td>
+            <td>#####</td>
+            <td>######</td>
+            <td >Administador</td>
+            <td><a href="javascript:void(0);" onclick="borrar(this);">Eliminar</a></td>
+          </tr>
+        </thead>
+      </table>
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+</body>
+</html>
