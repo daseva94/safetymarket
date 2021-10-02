@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<script>
+        alert("Test page")
+    </script>-->
+    
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./estilos/estilo1.css">
+    <script src="./js/user.js" defer></script>
+    <script src="./js/registrar.js" defer></script>
+</head>
+<body background="./media/fondo SM.jpg">
+
+    <div id="logo" class='page-nav'>
+        <h1><img src="./media/LOGO2.png" width="6%" height="6%">SAFETYMARKET</h1>
+    </div>
+
+    <div id="username">
+        <h2>username: click to change</h2>
+        
+
+    </div>
+    <div>    <p></p></div>
+
+    <div id="registro">
+        <h2>REGISTRO DE PRODUCTOS</h2>
+        
+        <form>
+        
+            <div><label>Nombre</label>
+                <input type="text">
+            </div>
+            <div><label>Tipo de producto: </label>
+                <div><input type="radio" id="tipo1" name="fav_language" value="Ropa">
+                    <label for="Ropa">Ropa</label><br>
+                    <input type="radio" id="tipo1" name="fav_language" value="Calzado">
+                    <label for="Calzado">Calzado</label><br>
+                    <input type="radio" id="tipo1" name="fav_language" value="Accesorios">
+                    <label for="Accesorios">Accesorios</label></div>
+                
+            <div><label>Valor</label>
+                <input type="number"></div>
+            <div><label>Stock</label>
+                <input type="number"></div>
+                <p></p>
+
+                <button onclick="registrar01()">REGISTRAR</button>
+                <button onclick="">LISTAR PRODUCTOS</button>
+                
+        
+            </div>
+
+        </div>
+    
+    <div id="listar">
+
+        <table>
+            <tr>
+              <th>Nombre</th>
+              <th>Tipo</th>
+              <th>Valor</th>
+              <th>Stock</th>
+            </tr>
+            <tr>
+              <td>Chaqueta ZARA</td>
+              <td>ROPA</td>
+              <td>300000</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Zapatillas Nike Air 3</td>
+              <td>CALZADO</td>
+              <td>280000</td>
+              <TD>8</TD>
+            </tr>
+
+            <TR>
+                <TD>Reloj Casio G-Shock g850</TD>
+                <td>ACCESORIOS</td>
+                <TD>6750000</TD>
+                <td>2</td>
+                            
+            </TR>
+          </table>
+    </div>
+    
+</body>
+
+
+    
+
+</form>
+</html>
