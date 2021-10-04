@@ -31,11 +31,23 @@
                     <input class="controls" type="text" name="dir_cliente" id="dir_cliente" required>
                     <p></p>
                 </div>
+                <h3> Ingrese Datos de Vendedor</h3>
+                <form action="">
+                    <div>
+                        <label form="nom_vendedor">Nombre Vendedor: </label>
+                        <input class="controls" type="text" name="nom_vendedor" id="nom_vendedor" required>
+                    </div>  
+                    <div>
+                        Fecha de venta: <input class="controls" type="date" name="fecha">
+                    </div>
+
+                </form>
                 <h3>Ingrese los datos de la venta</h3>
                 <table class="tbl_venta">
                     <thead>
                         <tr>
-                            <th>Código</th>
+                            <th>Identificador Unico de Venta</th>
+                            <th>Identificación</th>
                             <th>Descripción</th>
                             <th>Existencia</th>
                             <th>Cantidad</th>
@@ -43,29 +55,24 @@
                             <th>Precio Total</th>
                         </tr>
                         <tr>
-                            <td><input type="text" name="txt_cod_producto" id="txt_cod_producto"></td>
-                            <p></p>
+                            <td><input disabled="disabled" type="text" name="txt_identUV_producto" id="txt_identUV_producto"></td>
+                            <td><input type="text" name="txt_ident_producto" id="txt_ident_producto"></td>
                             <td><input type="text" name="txt_descrip_producto" id="txt_descrip_producto"></td>
-                            <p></p>
                             <td><input type="text" name="txt_exist_producto" id="txt_exist_producto"></td>
-                            <p></p>
                             <td><input type="text" name="txt_cant_producto" id="txt_cant_producto" value="0" min="1"></td>
-                            <p></p>
                             <td><input type="text" name="txt_precio_producto" id="txt_precio_producto" value="0.00"></td>
-                            <p></p>
                             <td><input type="text" name="txt_precio_total_producto" id="txt_precio_total_producto" value=0.00></td>
-                            <p></p>
                         </tr>    
                         <tr>
-                            <td colspan="5" class="textright">SUBTOTAL $.</td>
+                            <td colspan="6" class="textright">SUBTOTAL $.</td>
                             <td><input type="number" name="num_subtotal" id="num_subtotal"></td>
                         </tr>
                         <tr>
-                            <td colspan="5" class="textright">IVA (19%)</td>
+                            <td colspan="6" class="textright">IVA (19%)</td>
                             <td><input type="number" name="num_iva" id="num_iva"></td>
                         </tr>
                         <tr>
-                            <td colspan="5" class="textright">TOTAL $.</td>
+                            <td colspan="6" class="textright">TOTAL $.</td>
                             <td><input type="number" name="num_total" id="num_total"></td>
                         </tr> 
                     </thead>
