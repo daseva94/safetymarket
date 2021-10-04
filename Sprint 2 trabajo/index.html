@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="scripts.js" defer>  </script>
+</head>
+
+<body background="imagenes/fondo SM.jpg">
+
+    <div class='page-nav'>
+        <h1><img src="imagenes/LOGO2.png" width="6%" height="6%">SAFETYMARKET</h1>
+    </div>
+
+    <div class="container">
+        <header>
+            <h2 id="title">INVENTARIO</h2>
+        </header>
+        <button id="btnActualizar">INGRESAR</button>
+        <button id="btnBuscar"     onclick="buscar();">BUSCAR</button>
+        
+        <div class="forma">
+            <label for="numero" id="Codigo">#identificador del producto</label>
+            <input type="number" id="codigo" name="id-producto" minlength="5" maxlength="20" class="form-control"
+            placeholder="Numero de ID-producto" min="0" />
+        </div>
+        <div>
+            <label for="Valor" id="Valor-producto" required= "true">Valor del producto</label>
+            <input type="number" id="valor" name="id-valor" minlength="5" maxlength="20" class="form-control" 
+            placeholder="Valor del producto" min="0"  />
+        </div>
+        <div>
+            <label for="Fecha" id="Fecha-venta">Fecha de obtencion</label>
+            <input type="date" id="fecha" name="fecha-venta" minlength="5" maxlength="20" class="form-control" min="2021-04-01"
+            placeholder="fecha de obtencion" />
+        </div>
+        <div>
+            <label for="Descripcion" id="Descripcion-producto">Descripcion del producto</label>
+            <input type="text" id="descripcion" name="descripcion" minlength="5" maxlength="25" class="form-control" placeholder="Descripcion del producto"  />
+           </div>
+
+            <table>
+                <caption>INVENTARIO ACTUAL</caption>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Valor</th>
+                    <th>Fecha</th>
+                    <th>Descripcion</th>
+                    <th>Accion</th>
+                </tr>
+        
+                <tr>
+                    <td>1</td>
+                    <td>120000</td>
+                    <td>2021-06-12</td>
+                    <td>Camisa manga larga</td>
+                    <td><a href="javascript:void(0);" onclick= "del_tr(this)">Eliminar</a></td>
+                </tr>
+                <tr>
+                    <td>212</td>
+                    <td>18000</td>
+                    <td>2021-05-20</td>
+                    <td>pantalon</td>
+                    <td><a href="javascript:void(0);" onclick= "del_tr(this)">Eliminar</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>150000</td>
+                    <td>2021-06-22</td>
+                    <td>zapatos</td>
+                    <td><a href="javascript:void(0);" onclick= "del_tr(this)">Eliminar</a></td>
+                </tr>
+            </table>
+
+    </div>
+    
+
+</body>
+</html>
