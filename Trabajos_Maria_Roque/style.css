@@ -27,5 +27,6 @@ form{
     width: 50%;
     border: none;
     padding: 12px;
-    margin: 16px
+    margin: 16px;
+    cursor: pointer;
 }
