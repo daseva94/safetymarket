@@ -1,0 +1,17 @@
+@urlBase = http://localhost:3001
+GET {{urlBase}}/safetymarket/ HTTP/1.1
+###
+GET http://localhost:3001/safetymarket/6168118b179eec84e4ca1480 HTTP/1.1
+###
+POST http://localhost:3001/safetymarket HTTP/1.1
+content-type: application/json
+
+{"dni": 101001,"descripcion": "zapatos","valor": 2222, "estado":2}
+###
+DELETE {{urlBase}}/safetymarket/61680f81af063c4c9afac3b9
+###
+PUT  http://localhost:3001/safetymarket/6167c2280e38c4d80d63fb01  
+content-type: application/json
+
+{"dni": 12, "descripcion": "wsda", "valor": 10000,"estado":100}
+    

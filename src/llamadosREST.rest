@@ -1,0 +1,15 @@
+@urlBase = http://localhost:3001
+GET {{urlBase}}/myapp/ HTTP/1.1
+###
+GET http://localhost:3001/myapp/615d29d332e23f3142294a08 HTTP/1.1
+###
+POST http://localhost:3001/myapp HTTP/1.1
+content-type: application/json
+
+{"dni": 101001,"nombre": "Jota Jota Pelaez","descripcion": "56"}
+###
+DELETE {{urlBase}}/myapp/615d29d332e23f3142294a08
+###
+PUT http://localhost:3001/myapp/615e4ada0d87fddf07402cc3
+content-type: application/json
+{"dni": 546589,"nombre": "Juan Manuel Cuervo","descripcion": "16"}
