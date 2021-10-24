@@ -1,13 +1,14 @@
-import Login from "./Login";
+import React from "react";
+import {Login} from "./Login";
+import {Login3} from "./Login3";
 
 function App(props) {
   return (
     <div>
-      <Login />
+      <Login/>
+      <Login3/>
     </div>
   );
 }
 
-export default App;
-
-<input type="submit" value="ingresar con Google" className="button_google"/>   
+export default App; 
