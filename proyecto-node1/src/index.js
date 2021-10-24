@@ -7,8 +7,10 @@ app.use(express.json());
 
 const mongoose = require("./database/conection");
 const authRouter = require("./routes/authRouter");
+const rou_usuarios = require("./routes/rou_usuarios")
 
 app.use("/auth", authRouter);
+app.use("/user", rou_usuarios);
 
 
 app.listen(5000,() =>{
