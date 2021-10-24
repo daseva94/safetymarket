@@ -6,7 +6,7 @@ import { GoogleLogin } from 'react-google-login';
 export class Login3 extends React.Component{
     responseGoogle = (googleResp) => {
         console.log(googleResp);
-        axios.post("http://localhost:5000/auth/google", googleResp)
+        axios.post("http://localhost:5000/auth/google", {token: googleResp.tokenId})
         .then(data => console.log("todo bien", data))
         .catch(err => console.log("hubo error", err))   
     }
