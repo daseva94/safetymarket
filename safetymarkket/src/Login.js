@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./style/Login.css"
 export class Login extends React.Component{
     constructor(props){
         super(props);
@@ -27,6 +27,9 @@ export class Login extends React.Component{
         const textoBoton = this.state.logueado === true ? "Salir" : "Ingresar";
         return(
         <div>
+            <div>
+                <h1 className="safety">SAFETYMARKET</h1>
+            </div>
             <form className="formulario" onSubmit={this.mostrarMensaje}>
             <h1>Iniciar Sesión</h1>
             <div className="contenedor">
