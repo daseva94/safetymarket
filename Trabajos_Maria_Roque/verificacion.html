@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="Ingreso.js"></script>
+        <link rel="stylesheet" href="veristilo.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <title>Interfaz MR Sprint 2</title>
+    </head>
+    <body background="imagenes/fondo SM.jpg">
+        <h1 Style="font-size:100px; color:black; text-align: center;align-items: baseline;"><img src="imagenes/LOGO2.png">SAFETYMARKET</h1>
+        <h2 style="font-size: 90xp; text-align: center;">Bienvenido al Sistema especializado en Gestión de Ventas si ya te has registrado porfavor valida tus credenciales.</h2>
+        <div class="login-box">
+            <img class="avatar" src="Imagenes/LOGO2.png">
+            <h1>Iniciar Sesión</h1>
+            <form>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Ingrese Correo electrónico"required><br>
+                <label for="password">Contraseña:</label><br>
+                <input type="password" id="Contraseña" name="Contraseña" placeholder=""required><br>
+                <input onclick="ingreso()" type="submit" value= "Ingresar">
+                <button onclick="ingreso()" class="google"><img src="Imagenes/ico-google.svg" width="20" class="mr-3 mr-sm-4">Acceder con Google</button>
+                <p><a href="verificacion.html">Olvide mi Contraseña</a></p>
+                <p><a href="Untitled-1.html">No estoy registrado</a></p>
+            </form>
+        </div>
+    </body>
+</html>

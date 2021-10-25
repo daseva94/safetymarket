@@ -1,0 +1,32 @@
+*{
+margin: 0;
+padding:0 ;
+box-sizing: border-box;
+}
+form{
+    height: 500px;
+}
+.form-register{
+    width: 600px;;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 4px;
+    color: whitesmoke;
+    box-shadow: 7px 13px 37px #000;
+}
+.controls {
+    width: 100%;
+    background:whitesmoke;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border:1px solid
+}
+.form-register .botons {
+    width: 50%;
+    border: none;
+    padding: 12px;
+    margin: 16px;
+    cursor: pointer;
+}
