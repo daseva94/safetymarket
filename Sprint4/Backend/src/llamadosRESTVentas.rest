@@ -15,14 +15,15 @@ content-type: application/json
     "cantidad":1,
     "documento":123455,
     "cliente":"juan martibnex",
-    "vendedor":"ricardo perea"
+    "vendedor":"rdavid juangarito"
 }
 ###
 
 DELETE {{urlBase}}/students/6161966804aad3dd4c34c71c
 
 ###
-PUT http://localhost:5000/ventas/6174e485390f3e33c48e8e55
+PUT http://localhost:5000/ventas
+
 content-type: application/json
 
 {

@@ -33,11 +33,7 @@ app.get('/ventas/:id', (req, res) => {
 //INGRESAR VENTA
 app.post('/ventas', (req, res) => {
   console.log(req.params, req.body, req.headers);
-  ventasModel.create(
-    { 
-      id:345633
-      }
-  ).then((data)=>{
+  ventasModel.create(req.body).then((data)=>{
     res.json(data);
   }).catch(err =>{
     res.status(500).send(err);

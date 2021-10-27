@@ -14,11 +14,12 @@ class VentasForm extends React.Component {
     const ventas = this.props.ventas;
 
     return(
-      <div className="formulario" onSubmit={this.props.onSaveVentas}>
+      <div className="formulario">
         <form>
           <div>
             <label>Id</label>
-            <input type="number" value={ventas.id} onChange={this.props.onFormChanges} />
+            <input type="number" value={ventas.id} 
+            onChange={(evt) =>this.props.onFormChanges({...ventas, id: parseInt(evt.target.value)})} />
           </div>
           <div>
             <label>Total</label>
@@ -45,8 +46,9 @@ class VentasForm extends React.Component {
             <input type="text" value={ventas.vendedor} 
             onChange={(evt) =>this.props.onFormChanges({...ventas, vendedor: evt.target.value})}/>
           </div>
-            <input type="submit" value={ventas._id === -1 ? 'Crear' : 'Editar'} />
-            <input type="button" value="Limpiar" onClick={this.props.onClearVentas}  />
+            <button type="button" onClick={this.props.onSaveVentas} >Crear</button>
+            <button type="button" onClick={this.props.onModVentas} >Modificar</button>
+            <button type="button" onClick={this.props.onClearVentas}>Limpiar</button>
         </form>
       </div>
     );

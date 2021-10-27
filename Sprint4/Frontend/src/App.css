@@ -1,29 +1,53 @@
 .lista {
-  float: right;
+  float:right;
   width: 60%;
-  border-collapse: separate;
-  border-spacing: 2px;
+  border-collapse:collapse;
+  border-spacing: 1px;
   color: #fff;
 }
 
-table {
-  width: 500px;
-  margin: auto;
-  border: 3px solid black;
-  font-size: 100%;
-}
-
 .formulario {
-  float: left;
-  width:300px;
-	padding:16px;
+  float:left;
+  width: 300px;
+  border-collapse: separate;
+	padding:5px;
 	border-radius:10px;
+  border-style:groove;
 	margin:auto;
 	background-color:#ccc;
 }
 
+.page-nav {
+  border: 2px solid black;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 10, 190, 0.5);
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+table {
+  width: 300px;
+  margin: auto;
+  border: 3px solid black;
+  font-size:80%;
+}
+
+
+
 label{
-  width:72px;
+  width:70px;
 	font-weight:bold;
 	display:inline-block;
 }
@@ -39,16 +63,16 @@ body {
 }
 
 input{
-  width:180px;
+  width:150px;
 	padding:3px 10px;
 	border:1px solid #f6f6f6;
 	border-radius:3px;
 	background-color:#f6f6f6;
-	margin:8px 0;
+	margin:5px;
 	display:inline-block;
 }
 
-input[type="submit"]{
+input[type="button"]{
 	width:100%;
 	padding:8px 16px;
 	margin-top:32px;
@@ -58,26 +82,22 @@ input[type="submit"]{
 	color:#fff;
 	background-color:#000;
 } 
-input[type="submit"]:hover{
+input[type="button"]:hover{
 	cursor:pointer;
   background-color: #0000FF;
   color: white;
   border-radius: 15%;
 }
 
-h1 {
-  font-style: italic;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-h2 {
-  text-align: center;
-  font-size: x-large;
+button{
+  width:100%;
+	padding:4px 8px;
+	margin-top:16px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#000;
 }
 
 button:hover {
@@ -86,25 +106,18 @@ button:hover {
   border-radius: 15%;
 }
 
-.page-nav {
-  border: 2px solid black;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 10, 190, 0.5);
-}
-
-
-.container {
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-th, td {
-  border: 2px solid black;
+td {
+  border: 1px solid black;
   text-align: center;
   background: #fff;
   color: #000;
+}
+
+th {
+  border: 1px solid black;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  font-size: 150%;
 }
 

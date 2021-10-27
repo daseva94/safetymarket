@@ -4,10 +4,10 @@ import VentasList from './components/VentasList';
 import VentasForm from './components/VentasForm';
 import './App.css';
 
-
 class App extends React.Component{
   constructor(props){
     super(props);
+    this.URL_VENTAS =  "http://localhost:5000/ventas";
     this.emptyVentas = 
       { _id: -1, 
         id: "",
@@ -28,12 +28,12 @@ class App extends React.Component{
     this.onFormChanges = this.onFormChanges.bind(this);
     this.onEditVentas = this.onEditVentas.bind(this);
     this.onClearVentas = this.onClearVentas.bind(this);
-    this.onSaveVenta = this.onSaveVenta.bind(this);
+    this.onSaveVentas = this.onSaveVentas.bind(this);
+    this.onModVentas = this.onModVentas.bind(this);
   }
 
   componentDidMount(){
-    const URL = "http://localhost:5000/ventas";
-    axios.get(URL).then((resp) =>{
+    axios.get(this.URL_VENTAS).then((resp) =>{
     console.log("esta es la respuesta de el backend con la base de datos", resp);
     this.setState({ventas: resp.data});
     }).catch(err =>{
@@ -51,25 +51,45 @@ class App extends React.Component{
     this.setState({ventaSeleccionada: ventas_ID })
   }
 
-  onSaveVenta(evt){
-    evt.preventDefault();
-    const URL = "http://localhost:5000/ventas";
-
-    const ventas = this.state.ventaSeleccionada;
-    if(ventas.id ==="" || ventas.total ===""||ventas.cantidad===""||ventas.vendedor===""){
+  onSaveVentas(){
+    
+    const vent = this.state.ventaSeleccionada;
+    if(vent.id ===" " || vent.total ==="" || vent.cantidad==="" || vent.vendedor===""){
       alert("hay campos que deben ser llenados");
       return;
     }
+    console.log("todo bien con el post", vent);
 
-    if(this.state.ventaSeleccionada._id === -1){
+    if(vent._id === -1){
       console.log("hacer un POST");
-      axios.post(URL, ventas).then((resp) => {
-        console.log("todo bien con el post");
+      axios.post(this.URL_VENTAS, {...vent, _id:null, fecha:Date.now}).then((resp) => {
+      console.log("todo bien con el post", resp);
+      this.setState((state, props)=>({
+        ventas: [...state.ventas, resp.data],
+        ventaSeleccionada: this.emptyVentas
+      }))
       }).catch(err => {
         console.log("ERROR AL HACER POST", err);
       });
-    }else{
-      console.log("hacer un PUT");
+    }
+  }
+
+  onModVentas(){
+
+    const vent = this.state.ventaSeleccionada;
+
+    console.log("todo bien con el put", vent);
+    if(this.state.ventaSeleccionada._id !== -1){
+      console.log("hacer un Put");
+      axios.put(`${this.URL_VENTAS}/${vent._id}`, {...vent, fecha:Date.now}).then((resp) => {
+        console.log("todo bien con el put", vent);
+        this.setState((state, props) => ({
+          ventas: state.ventas.map(vt => vt._id === vent._id ? vent : vt),
+          ventaSeleccionada: this.emptyVentas
+        }))
+      }).catch(err => {
+        console.log("ERROR AL HACER PUT", err);
+      });
     }
   }
 
@@ -81,16 +101,20 @@ class App extends React.Component{
   render(){
     return(
       <div>
+        <div className='page-nav'>
+            <h1><img src={require("./imagenes/LOGO2.png")} alt=" "/>SAFETYMARKET</h1>
+        </div>
         <div className="container">
           <VentasForm 
           ventas={this.state.ventaSeleccionada} 
           onFormChanges={this.onFormChanges}
           onClearVentas={this.onClearVentas}
-          onSaveVenta = {this.onSaveVenta} />
+          onSaveVentas = {this.onSaveVentas} 
+          onModVentas = {this.onModVentas} />
+
           <VentasList 
           ventas = {this.state.ventas} 
           onEditVentas={this.onEditVentas}/>
-
         </div>
       </div>
     );
